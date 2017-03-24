@@ -1,0 +1,10 @@
+---
+# Setup apt repo
+- name: Add Kodi ppa
+  apt_repository: repo='ppa:team-xbmc/ppa'
+# Install from apt
+- name: Install Kodi
+  apt: name=kodi state=present
+
+- name: Install TVHeadend PVR
+  apt: name=kodi-pvr-hts state=present
